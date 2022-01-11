@@ -2,8 +2,7 @@ Name:           qt5-qtwebsockets
 Version:        5.5.1
 Release:        1
 Summary:        Qt 5 WebSockets Library
-License:        LGPLv2+
-Group:          Qt/Qt
+License:        LGPLv2 with exception or LGPLv3 or Qt Commercial
 Url:            http://qt.digia.com
 Source:         %{name}-%{version}.tar.gz
 BuildRequires:  pkgconfig(Qt5Core)
@@ -17,7 +16,6 @@ The QtWebSockets module implements the WebSocket protocol as specified in RFC
 
 %package -n qt5-qtdeclarative-import-websockets
 Summary:        Qt 5 WebSockets Library - QML imports
-Group:          Qt/Qt
 Requires:       %{name} = %{version}-%{release}
 
 %description -n qt5-qtdeclarative-import-websockets
@@ -25,7 +23,6 @@ Qt 5 WebSockets Library - QML imports
 
 %package devel
 Summary:        Development files for %{name}
-Group:          Qt/Qt
 Requires:       %{name} = %{version}-%{release}
 
 %description devel
@@ -50,18 +47,16 @@ rm -f %{buildroot}%{_libdir}/lib*.la
 
 %files
 %defattr(-,root,root,755)
-%doc *GPL*
+%license LICENSE.LGPLv21 LGPL_EXCEPTION.txt LICENSE.LGPLv3 LICENSE.GPLv3
 %{_libdir}/libQt5WebSockets.so.*
 
 %files -n qt5-qtdeclarative-import-websockets
 %defattr(-,root,root,755)
-%doc *GPL*
 %{_libdir}/qt5/qml/Qt/WebSockets/
 %{_libdir}/qt5/qml/QtWebSockets/
 
 %files devel
 %defattr(-,root,root,755)
-%doc *GPL*
 %{_includedir}/qt5/QtWebSockets
 %{_libdir}/cmake/Qt5*
 %{_libdir}/libQt5WebSockets.prl
