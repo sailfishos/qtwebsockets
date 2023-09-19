@@ -52,14 +52,14 @@ rm -f %{buildroot}%{_libdir}/lib*.la
 
 %files -n qt5-qtdeclarative-import-websockets
 %defattr(-,root,root,755)
-%{_libdir}/qt5/qml/Qt/WebSockets/
-%{_libdir}/qt5/qml/QtWebSockets/
+%{_qt5_archdatadir}/qml/Qt/WebSockets/
+%{_qt5_archdatadir}/qml/QtWebSockets/
 
 %files devel
 %defattr(-,root,root,755)
-%{_includedir}/qt5/QtWebSockets
-%{_libdir}/cmake/Qt5*
-%{_libdir}/libQt5WebSockets.prl
-%{_libdir}/libQt5WebSockets.so
-%{_libdir}/pkgconfig/Qt5WebSockets.pc
-%{_datadir}/qt5/mkspecs/modules/*.pri
+%{_qt5_includedir}/QtWebSockets
+%{_qt5_libdir}/cmake/Qt5*
+%{_qt5_libdir}/libQt5WebSockets.prl
+%{_qt5_libdir}/libQt5WebSockets.so
+%{_qt5_libdir}/pkgconfig/Qt5WebSockets.pc
+%{_qt5_archdatadir}/mkspecs/modules/*.pri
